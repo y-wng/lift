@@ -1,0 +1,24 @@
+# Local data and model artifacts.
+assets/
+checkpoints/
+/data/
+wandb/
+artifacts/
+outputs/
+
+# Python caches and environments.
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.agents/
+.codex/
+.env
+.env.*
+
+# Local logs and generated reports.
+*.log
+*.tmp
+*.swp
+.ipynb_checkpoints/

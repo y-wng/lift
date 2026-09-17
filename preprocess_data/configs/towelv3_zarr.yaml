@@ -1,0 +1,17 @@
+data:
+  - "data/towelv3/replay_buffer.zarr"
+task:
+  - "Fold the towel twice into a triangle."
+features:
+  left_wrist_img:
+    dtype: "image"
+    shape: [224, 224, 3]
+    names: ["height", "width", "channel"]
+  state:
+    dtype: "float32"
+    shape: [7,] 
+    names: ["state"]
+  actions:
+    dtype: "float32"
+    shape: [7,]
+    names: ["actions"]

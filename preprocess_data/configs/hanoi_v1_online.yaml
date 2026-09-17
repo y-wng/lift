@@ -1,0 +1,94 @@
+data:
+  data/inference_rollout_data:
+    num_episodes: null
+    task: "Solve the Tower of Hanoi by moving the rings onto the target peg."
+    success: null
+    lines: null
+    invalid_id: []
+    drop_control_flag_zero_frames: false
+
+    # Raw NEDF2 sources.
+    # Values can be:
+    # - device ids for camera or default /lowdim/<device>
+    # - explicit lowdim topics such as /lowdim/action/... or /lowdim/command/...
+    feat:
+      left_wrist_img: IPhoneCameraDevice_0
+      left_robot_pose: robot_single
+      left_gripper: gripper_single
+      left_wrench: wrench_0
+      control_flag: control_flag_1
+      action: /lowdim/action/rizonrobot_1_control
+      command: /lowdim/cartesian_cmd_1
+
+    # Feature builders let one dataset feature be composed from multiple raw sources.
+    # Current setup is single-arm.
+    # For future dual-arm support:
+    # - add right_robot_pose / right_gripper aliases above
+    # - change state/actions shape from [7] to [14]
+    # - switch transform to bimanual_pose_*_and_gripper_to_state
+    feature_builders:
+      left_wrist_img:
+        source: left_wrist_img
+      state:
+        sources: [left_robot_pose, left_gripper]
+        transform: pose_wxyz_and_gripper_to_state
+      command:
+        sources: [command, left_gripper]
+        transform: pose_wxyz_and_gripper_to_state
+      actions:
+        source: action
+        transform: pose_wxyz_gripper_to_state
+      left_wrench:
+        source: left_wrench
+      control_flag:
+        source: control_flag
+
+    # Hardware latencies are in seconds.
+    latency:
+      left_wrist_img: 0.20
+      left_robot_pose: 0.00
+      left_gripper: 0.00
+      left_wrench: 0.00
+      control_flag: 0.00
+      action: 0.00
+      command: 0.00
+
+anomaly_detection:
+  expected_fps:
+    left_wrist_img: [20, 35]
+    left_robot_pose: [80, 130]
+    left_gripper: [80, 130]
+    left_wrench: [80, 130]
+    control_flag: [80, 130]
+    action: [80, 130]
+    command: [80, 130]
+  fps_tolerance: 0.3
+  min_frames: 20
+  max_timestamp_gap: 1.0
+  min_brightness: 10
+  image_check_ratio: 0.1
+  zero_data_threshold: 0.99
+  frozen_data_threshold: 0.98
+  frozen_frame_diff_threshold: 1e-6
+
+features:
+  left_wrist_img:
+    dtype: "image"
+    shape: [224, 224, 3]
+    names: ["height", "width", "channel"]
+  state:
+    dtype: "float32"
+    shape: [7]
+    names: ["state"]
+  actions:
+    dtype: "float32"
+    shape: [7]
+    names: ["actions"]
+  left_wrench:
+    dtype: "float32"
+    shape: [6]
+    names: ["force_torque"]
+  control_flag:
+    dtype: "float32"
+    shape: [1]
+    names: ["control_flag"]
