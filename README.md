@@ -4,24 +4,24 @@
 <p align="center">
   <a href="https://y-wng.github.io/">Yi Wang</a><sup>12*</sup>,
   <a href="https://wendichen.me">Wendi Chen</a><sup>12*‡</sup>,
-  <a href="https://github.com/nssmd">Zimo Wen</a><sup>15*</sup>,
+  <a href="https://github.com/nssmd">Zimo Wen</a><sup>14*</sup>,
   <a href="https://hanxue.me">Han Xue</a><sup>1</sup>,
   Xueqi Li<sup>23</sup>,
   <a href="https://virlus.github.io/">Wenye Yu</a><sup>12</sup>,
   <br>
   Zhijie Chen<sup>1</sup>,
   Hao Yang<sup>1</sup>,
-  <a href="https://lyuj1998.github.io">Jun Lv</a><sup>14</sup>,
+  <a href="https://lyuj1998.github.io">Jun Lv</a><sup>15</sup>,
   <a href="https://alvinwen428.github.io">Chuan Wen</a><sup>1†</sup>,
-  <a href="https://www.mvig.org">Cewu Lu</a><sup>124†</sup>
+  <a href="https://www.mvig.org">Cewu Lu</a><sup>125†</sup>
   <br>
   <sup>1</sup>Shanghai Jiao Tong University &nbsp;
   <sup>2</sup>Shanghai Innovation Institute
   <br>
   <sup>3</sup>Southern University of Science and Technology &nbsp;
-  <sup>4</sup>Noematrix Ltd.
+  <sup>4</sup>Zhiyuan College, Shanghai Jiao Tong University
   <br>
-  <sup>5</sup>Zhiyuan College, Shanghai Jiao Tong University
+  <sup>5</sup>Noematrix Ltd.
   <br>
   <sup>*</sup>Equal contribution &nbsp;
   <sup>‡</sup>Project lead &nbsp;
