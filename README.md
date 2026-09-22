@@ -4,7 +4,7 @@
 <p align="center">
   <a href="https://y-wng.github.io/">Yi Wang</a><sup>12*</sup>,
   <a href="https://wendichen.me">Wendi Chen</a><sup>12*‡</sup>,
-  <a href="https://github.com/nssmd">Zimo Wen</a><sup>1*</sup>,
+  <a href="https://github.com/nssmd">Zimo Wen</a><sup>15*</sup>,
   <a href="https://hanxue.me">Han Xue</a><sup>1</sup>,
   Xueqi Li<sup>23</sup>,
   <a href="https://virlus.github.io/">Wenye Yu</a><sup>12</sup>,
@@ -20,6 +20,8 @@
   <br>
   <sup>3</sup>Southern University of Science and Technology &nbsp;
   <sup>4</sup>Noematrix Ltd.
+  <br>
+  <sup>5</sup>Zhiyuan College, Shanghai Jiao Tong University
   <br>
   <sup>*</sup>Equal contribution &nbsp;
   <sup>‡</sup>Project lead &nbsp;
